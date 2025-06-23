@@ -36,7 +36,7 @@
 		display: block;
 	}
 	
-	.box-middle:hover svg-wiggle {
+	.box-middle:hover .svg-wiggle {
 		animation: wiggle 0.4s ease-in-out infinite;
 	}
 
@@ -64,7 +64,7 @@
   4. LAYOUT & CONTAINERS
 ==========================*/
     .box-container {
-		display: flex;justify
+		display: flex;
 		content: center;
 		gap: 20px;
 		margin-top: 20px;
