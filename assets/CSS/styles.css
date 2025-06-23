@@ -1,3 +1,16 @@
+/*==========================
+  1. BASE & RESET
+==========================*/
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+      color: #252527;
+    }
+
+/*==========================
+  2. KEYFRAMES
+==========================*/
     @keyframes wiggle {
       0%   { transform: translateX(-50%) rotate(0deg); }
       25%  { transform: translateX(-50%) rotate(-5deg); }
@@ -15,42 +28,15 @@
 	  0% { transform: translateX(0); opacity: 0; }
 	  100% { transform: translateX(10px); opacity: 1; }
 	}
-	
-	/* Container for icons */
-	.box-middle-bottom .svg-slot.triple-icon-container {
-	  bottom: -20px;
-	  left: 50%;
-	  transform: translateX(-50%);
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  gap: 3px;
+
+/*==========================
+  3. ANIMATIONS
+==========================*/
+	.svg-wiggle {
+	  animation: wiggle 0.4s ease-in-out infinite;
+	  display: block;
 	}
 
-	.triple-icon-container img {
-	  width: 40px;
-	  height: auto;
-	}
-	
-	/* Show on hover */
-	.hover-icons {
-	  display: flex;
-	  gap: 3px;
-	  align-items: center;
-	  opacity: 0;
-	  transition: opacity 0.3s ease;
-	}
-	
-	.box-middle-bottom:hover .hover-icons {
-	  opacity: 1;
-	}
-	
-	.hover-icons img {
-	  position: relative;
-	  transition: opacity 0.3s ease, transform 0.3s ease;
-	  pointer-events: none;
-	}
-	
 	.slide-left, .slide-right {
 	  opacity: 0;
 	  transform: translateX(0);
@@ -70,40 +56,10 @@
 	  transform: translateX(40px);
 	  opacity: 1;
 	}
-	
-	.svg-center-default {
-	  opacity: 1;
-	  transition: opacity 0.3s ease;
-	}
-	
-	.svg-center-hover {
-	  opacity: 0;
-	  transition: opacity 0.3s ease;
-	}
 
-	.box-middle-bottom:hover .svg-center-hover {
-	  opacity: 1;
-	}
-
-	.box-middle-bottom:hover .svg-center-default {
-	  opacity: 0;
-	}
-
-	.box-middle:hover .svg-wiggle {
-	  animation: wiggle 0.4s ease-in-out infinite;
-	}
-
-	.svg-wiggle {
-	  display: block;
-	}
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Georgia, serif;
-      color: #252527;
-    }
-
+/*==========================
+  4. LAYOUT & CONTAINERS
+==========================*/
     .box-container {
       display: flex;
       justify-content: center;
@@ -128,10 +84,43 @@
       transition: transform 0.3s ease;
 	}
 
+/*==========================
+  5. HOVER & INTERACTIONS
+==========================*/
     .fancy-box:hover {
       transform: scale(1.05);
 	}
-    
+	
+	.svg-center-hover {
+	  opacity: 0;
+	  transition: opacity 0.3s ease;
+	}
+
+	.box-middle-bottom:hover .svg-center-hover {
+	  opacity: 1;
+	}
+
+	.box-middle-bottom:hover .svg-center-default {
+	  opacity: 0;
+	}
+
+	.box-middle-bottom:hover .hover-icons {
+	  opacity: 1;
+	}
+	
+	.svg-center-default {
+	  opacity: 1;
+	  transition: opacity 0.3s ease;
+	}
+	
+/*==========================
+  6. ICON STYLES
+==========================*/
+	.triple-icon-container img {
+	  width: 40px;
+	  height: auto;
+	}
+	
     .svg-slot {
       position: absolute;
       width: 40px;
@@ -139,16 +128,34 @@
       z-index: 10;
 	  pointer-events: none; /* prevents cursor conflict */
     }
-	
-	.svg-center-default,
-	.svg-center-hover {
-	  position: absolute;
+
+	.hover-icons {
+	  display: flex;
+	  gap: 3px;
+	  align-items: center;
+	  opacity: 0;
+	  transition: opacity 0.3s ease;
+	}	
+
+	.hover-icons img {
+	  position: relative;
+	  transition: opacity 0.3s ease, transform 0.3s ease;
+	  pointer-events: none;
+	}
+    
+	.box-middle-bottom .svg-slot.triple-icon-container {
+	  bottom: -20px;
 	  left: 50%;
-	  bottom: -10px;
 	  transform: translateX(-50%);
-	  width: 40px;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 3px;
 	}
 	
+/*==========================
+  7. POSITIONING
+==========================*/
     .box-left .svg-slot {
       top: -20px;
       left: -20px;
@@ -174,3 +181,12 @@
       bottom: -20px;
       right: -20px;
     }
+	
+	.svg-center-default,
+	.svg-center-hover {
+	  position: absolute;
+	  left: 50%;
+	  bottom: -10px;
+	  transform: translateX(-50%);
+	  width: 40px;
+	}
