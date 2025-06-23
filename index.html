@@ -1,181 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    @keyframes wiggle {
-      0%   { transform: translateX(-50%) rotate(0deg); }
-      25%  { transform: translateX(-50%) rotate(-5deg); }
-      50%  { transform: translateX(-50%) rotate(5deg); }
-      75%  { transform: translateX(-50%) rotate(-5deg); }
-      100% { transform: translateX(-50%) rotate(0deg); }
-    }
-
-	@keyframes slideLeft {
-	  0% { transform: translateX(0); opacity: 0; }
-	  100% { transform: translateX(-10px); opacity: 1; }
-	}
-
-	@keyframes slideRight {
-	  0% { transform: translateX(0); opacity: 0; }
-	  100% { transform: translateX(10px); opacity: 1; }
-	}
-	
-	/* Container for icons */
-	.box-middle-bottom .svg-slot.triple-icon-container {
-	  bottom: -20px;
-	  left: 50%;
-	  transform: translateX(-50%);
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  gap: 3px;
-	}
-
-	.triple-icon-container img {
-	  width: 40px;
-	  height: auto;
-	}
-	
-	.box-middle:hover .svg-wiggle {
-	  animation: wiggle 0.4s ease-in-out infinite;
-	}
-	
-	/* Show on hover */
-	.hover-icons {
-	  display: flex;
-	  gap: 3px;
-	  align-items: center;
-	  opacity: 0;
-	  transition: opacity 0.3s ease;
-	}
-	
-	.box-middle-bottom:hover .hover-icons {
-	  opacity: 1;
-	}
-	
-	.hover-icons img {
-	  position: relative;
-	  transition: opacity 0.3s ease, transform 0.3s ease;
-	  pointer-events: none;
-	}
-	
-	.slide-left, .slide-right {
-	  opacity: 0;
-	  transform: translateX(0);
-	}
-	
-	.hover-icons .slide-left,
-	.hover-icons .slide-right {
-	  transition: transform 0.3s ease, opacity 0.3s ease;
-	}
-
-	.box-middle-bottom:hover .hover-icons .slide-left {
-	  transform: translateX(-10px);
-	  opacity: 1;
-	}
-
-	.box-middle-bottom:hover .hover-icons .slide-right {
-	  transform: translateX(10px);
-	  opacity: 1;
-	}
-	
-	.svg-center-default {
-	  opacity: 1;
-	  transition: opacity 0.3s ease;
-	}
-	
-	.svg-center-hover {
-	  opacity: 0;
-	  transition: opacity 0.3s ease;
-	}
-
-	.box-middle-bottom:hover .svg-center-hover {
-	  opacity: 1;
-	}
-
-	.box-middle-bottom:hover .svg-center-default {
-	  opacity: 0;
-	}
-	
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Georgia, serif;
-      color: #252527;
-    }
-
-    .box-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .fancy-box {
-      position: relative;
-      width: 200px;
-      padding: 20px;
-      background-color: #96ACB6; /* Dusty blue */
-      border: 5px solid #BFA781; /* Gold border */
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      color: #252527;
-      overflow: visible;
-    }
-
-    .fancy-box {
-      transition: transform 0.3s ease;
-	}
-
-    .fancy-box:hover {
-      transform: scale(1.05);
-	}
-    
-    .svg-slot {
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      z-index: 10;
-	  pointer-events: none; /* prevents cursor conflict */
-    }
-	
-	.svg-center-default,
-	.svg-center-hover {
-	  position: absolute;
-	  left: 50%;
-	  bottom: -10px;
-	  transform: translateX(-50%);
-	  width: 40px;
-	}
-	
-
-    .box-left .svg-slot {
-      top: -20px;
-      left: -20px;
-    }
-
-    .box-middle .svg-slot {
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .box-right .svg-slot {
-      top: -20px;
-      right: -20px;
-    }
-	
-    .box-left-bottom .svg-slot {
-      bottom: -20px;
-      left: -20px;
-    }
-
-    .box-right-bottom .svg-slot {
-      bottom: -20px;
-      right: -20px;
-    }
-  </style>
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -183,12 +9,12 @@
   
   <!-- Top Row -->
   <div class="fancy-box box-left">
-    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/treasure-map-svgrepo-com.svg" alt="" class="svg-slot svg-wiggle">
+    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/treasure-map-svgrepo-com.svg" alt="" class="svg-slot">
     <p><strong>Unique Biomes</strong><br/>5 unique biomes tied to 5 unique types of Lupovenator with the possibility of more subspecies in the future.</p>
   </div>
 
   <div class="fancy-box box-middle">
-    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-running-silhouette-svgrepo-com.svg" alt="" class="svg-slot">
+    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-running-silhouette-svgrepo-com.svg" alt="" class="svg-slot svg-wiggle">
     <p><strong>Fun Activities</strong><br/>Interactive activities along the lines of Hunting, Herbalism/Gathering, Exploration and more.</p>
   </div>
 
@@ -202,7 +28,7 @@
   
   <!-- Bottom Row -->
   <div class="fancy-box box-left-bottom">
-    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/treasure-map-svgrepo-com.svg" alt="" class="svg-slot svg-wiggle">
+    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/treasure-map-svgrepo-com.svg" alt="" class="svg-slot">
     <p><strong>Header</strong><br/>Content</p>
   </div>
 
