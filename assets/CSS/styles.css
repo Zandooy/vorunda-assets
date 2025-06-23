@@ -67,12 +67,12 @@
 	}
 
 	.box-middle-bottom:hover .hover-icons .slide-left {
-	  transform: translateX(-10px);
+	  transform: translateX(-40px);
 	  opacity: 1;
 	}
 
 	.box-middle-bottom:hover .hover-icons .slide-right {
-	  transform: translateX(10px);
+	  transform: translateX(40px);
 	  opacity: 1;
 	}
 	
