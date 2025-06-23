@@ -38,7 +38,6 @@
 	
 	.box-middle:hover svg-wiggle {
 		animation: wiggle 0.4s ease-in-out infinite;
-		display: block;
 	}
 
 	.slide-left, .slide-right {
