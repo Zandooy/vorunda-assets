@@ -2,6 +2,23 @@
 <html>
 <head>
   <style>
+    @keyframes wiggle {
+      0%   { transform: rotate(0deg); }
+      25%  { transform: rotate(-5deg); }
+      50%  { transform: rotate(5deg); }
+      75%  { transform: rotate(-5deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .box-middle .svg-wiggle {
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .box-middle:hover .svg-wiggle {
+      animation: wiggle 0.5s infinite;
+	  
+    }
+	
     body {
       margin: 0;
       padding: 0;
@@ -82,14 +99,14 @@
 
 <div class="box-container">
   
-  <!-- First Row -->
+  <!-- Top Row -->
   <div class="fancy-box box-left">
     <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/treasure-map-svgrepo-com.svg" alt="" class="svg-slot">
     <p><strong>Unique Biomes</strong><br/>5 unique biomes tied to 5 unique types of Lupovenator with the possibility of more subspecies in the future.</p>
   </div>
 
   <div class="fancy-box box-middle">
-    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-running-silhouette-svgrepo-com.svg" alt="" class="svg-slot">
+    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-running-silhouette-svgrepo-com.svg" alt="" class="svg-wiggle">
     <p><strong>Fun Activities</strong><br/>Interactive activities along the lines of Hunting, Herbalism/Gathering, Exploration and more.</p>
   </div>
 
@@ -101,7 +118,7 @@
 </div>
 <div class="box-container">
   
-  <!-- Second Row -->
+  <!-- Bottom Row -->
   <div class="fancy-box box-left-bottom">
     <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/treasure-map-svgrepo-com.svg" alt="" class="svg-slot">
     <p><strong>Header</strong><br/>Content</p>
