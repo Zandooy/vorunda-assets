@@ -10,25 +10,65 @@
       100% { transform: translateX(-50%) rotate(0deg); }
     }
 
-    .box-middle .svg-wiggle {
-      transition: transform 0.2s ease-in-out;
-    }
+	@keyframes slideLeft {
+	  0% { transform: translateX(0); opacity: 0; }
+	  100% { transform: translateX(-10px); opacity: 1; }
+	}
 
-    .box-middle:hover .svg-wiggle {
-      animation: wiggle 0.5s infinite;
-	  
-    }
-	
-	.box-middle-bottom .svg-hover {
-		display: none;
+	@keyframes slideRight {
+	  0% { transform: translateX(0); opacity: 0; }
+	  100% { transform: translateX(10px); opacity: 1; }
 	}
 	
-	.box-middle-bottom:hover .svg-default {
-		display: none;
+	/* Container for icons */
+	.box-middle-bottom .svg-slot.triple-icon-container {
+	  bottom: -20px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  gap: 3px;
+	}
+
+	/* Default static icon */
+	.svg-default {
+	  width: 40px
 	}
 	
-	.box-middle-bottom:hover .svg-hover {
-		display: block;
+	
+	/* Hover group */
+	.hover-icons {
+	  display: none;
+	  gap: 3px;
+	  align-items: center;
+	}
+	
+	/* Show on hover */
+	.hover-icons {
+	  display: none;
+	  gap: 3px;
+	  align-items: center;
+	}
+	
+	box.middle-bottom:hover .hover-icons {
+	  display: flex;
+	}
+	
+	/* Center hover icon (static) */
+	.svg-hover {
+	  width: 40px
+	}
+	
+	/* Side icons with slide animation */
+	.hover-icons .slide-left {
+	  width: 30px;
+	  animation: slideLeft 0.3s ease forwards;
+	}
+	
+	.hover-icons .slide-right {
+	  width: 30px;
+	  animation: slideRight 0.3s ease forwards;
 	}
 	
     body {
@@ -60,10 +100,11 @@
 
     .fancy-box {
       transition: transform 0.3s ease;
-}
+	}
+
     .fancy-box:hover {
       transform: scale(1.05);
-}
+	}
     
     .svg-slot {
       position: absolute;
@@ -94,50 +135,7 @@
       left: -20px;
     }
 
-    /* Base positioning for the SVG container */
-	.box-middle-bottom .svg-slot.triple-icon-container {
-	  position: absolute;
-	  bottom: -20px;
-	  left: 50%;
-	  transform: translateX(-50%);
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-}
 
-/* Default icon */
-	.svg-default {
-	  display: block;
-	  width: 40px;
-}
-
-/* Hidden hover icons group */
-	.hover-icons {
-	  display: none;
-	  flex-direction: row;
-	  gap: 3px;
-	  align-items: center;
-}
-
-/* On hover, swap visibility */
-	.box-middle-bottom:hover .svg-default {
-	  display: none;
-}
-
-	.box-middle-bottom:hover .hover-icons {
-	  display: flex;
-}
-
-/* Wiggle effect */
-	.wiggle-icon {
-	  width: 30px;
-	  animation: wiggle 0.4s ease-in-out infinite;
-}
-
-/* Optional: no animation for hover center icon */
-	.svg-hover {
-	  width: 40px;
-}
 
     .box-right-bottom .svg-slot {
       bottom: -20px;
@@ -175,16 +173,20 @@
   </div>
 
   <div class="fancy-box box-middle-bottom">
-  <div class="svg-slot triple-icon-container">
-    <!-- Default static icon -->
-    <img src="github.com/Zandooy/vorunda-assets/blob/main/assets/SVGs/horse-grazing-black-silhouette-svgrepo-com.svg" class="svg-default">
+	<div class="svg-slot triple-icon-container">
+		<!-- Default static icon -->
+		<img src="github.com/Zandooy/vorunda-assets/blob/main/assets/SVGs/horse-grazing-black-silhouette-svgrepo-com.svg" class="svg-default">
 
-    <!-- Hover group: center icon + left/right wiggle icons -->
-    <div class="hover-icons">
-      <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-walking-black-silhouette-facing-to-left-svgrepo-com.svg" class="wiggle-icon">
-      <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-black-silhouette-svgrepo-com.svg" class="svg-hover">
-      <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-in-running-motion-silhouette-svgrepo-com.svg" class="wiggle-icon">
-    <p><strong>Build Your Own Herds</strong><br/>Start playing with a free, randomly rolled starter stallion of the standard princeps variety. Build your herd through random event encounters, breeding, buying & trading with other players, raffles, custom imports and more.</p>
+		<!-- Hover group -->
+		<div class="hover-icons">
+		  <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-walking-black-silhouette-facing-to-left-svgrepo-com.svg" class="slide-left">
+		  <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-black-silhouette-svgrepo-com.svg" class="svg-hover">
+		  <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-in-running-motion-silhouette-svgrepo-com.svg" class="slide-right">
+		</div>
+	</div>
+	
+    <p><strong>Build Your Own Herds</strong><br/>
+	Start playing with a free, randomly rolled starter stallion of the standard princeps variety. Build your herd through random event encounters, breeding, buying & trading with other players, raffles, custom imports and more.</p>
   </div>
 
   <div class="fancy-box box-bottom">
