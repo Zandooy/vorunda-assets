@@ -94,11 +94,50 @@
       left: -20px;
     }
 
-    .box-middle-bottom .svg-slot {
-      bottom: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
+    /* Base positioning for the SVG container */
+	.box-middle-bottom .svg-slot.triple-icon-container {
+	  position: absolute;
+	  bottom: -20px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+}
+
+/* Default icon */
+	.svg-default {
+	  display: block;
+	  width: 40px;
+}
+
+/* Hidden hover icons group */
+	.hover-icons {
+	  display: none;
+	  flex-direction: row;
+	  gap: 3px;
+	  align-items: center;
+}
+
+/* On hover, swap visibility */
+	.box-middle-bottom:hover .svg-default {
+	  display: none;
+}
+
+	.box-middle-bottom:hover .hover-icons {
+	  display: flex;
+}
+
+/* Wiggle effect */
+	.wiggle-icon {
+	  width: 30px;
+	  animation: wiggle 0.4s ease-in-out infinite;
+}
+
+/* Optional: no animation for hover center icon */
+	.svg-hover {
+	  width: 40px;
+}
 
     .box-right-bottom .svg-slot {
       bottom: -20px;
@@ -136,8 +175,15 @@
   </div>
 
   <div class="fancy-box box-middle-bottom">
-    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-standing-black-shape-svgrepo-com.svg" alt="" class="svg-slot svg-default">
-	<img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-standing-black-shape-svgrepo-com.svg" alt="" class="svg-slot svg-hover">
+  <div class="svg-slot triple-icon-container">
+    <!-- Default static icon -->
+    <img src="github.com/Zandooy/vorunda-assets/blob/main/assets/SVGs/horse-grazing-black-silhouette-svgrepo-com.svg" class="svg-default">
+
+    <!-- Hover group: center icon + left/right wiggle icons -->
+    <div class="hover-icons">
+      <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-walking-black-silhouette-facing-to-left-svgrepo-com.svg" class="wiggle-icon">
+      <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-black-silhouette-svgrepo-com.svg" class="svg-hover">
+      <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-in-running-motion-silhouette-svgrepo-com.svg" class="wiggle-icon">
     <p><strong>Build Your Own Herds</strong><br/>Start playing with a free, randomly rolled starter stallion of the standard princeps variety. Build your herd through random event encounters, breeding, buying & trading with other players, raffles, custom imports and more.</p>
   </div>
 
