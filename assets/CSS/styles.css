@@ -33,10 +33,6 @@
 	  height: auto;
 	}
 	
-	.box-middle:hover .svg-wiggle {
-	  animation: wiggle 0.4s ease-in-out infinite;
-	}
-	
 	/* Show on hover */
 	.hover-icons {
 	  display: flex;
@@ -92,6 +88,10 @@
 
 	.box-middle-bottom:hover .svg-center-default {
 	  opacity: 0;
+	}
+
+	.box-middle:hover .svg-wiggle {
+	  animation: wiggle 0.4s ease-in-out infinite;
 	}
 	
     body {
