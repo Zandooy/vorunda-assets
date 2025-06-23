@@ -31,43 +31,70 @@
 	  gap: 3px;
 	}
 
-	/* Default static icon */
-	.svg-default {
-	  width: 40px
+	.triple-icon-container img {
+	  width: 40px;
+	  height: auto;
 	}
 	
-	/* Hover group */
-	.hover-icons {
-	  display: none;
-	  gap: 3px;
-	  align-items: center;
+	.svg-wiggle {
+	  animation: wiggle 0.4s ease-in-out infinite;
 	}
 	
 	/* Show on hover */
 	.hover-icons {
-	  display: none;
+	  display: flex;
 	  gap: 3px;
 	  align-items: center;
+	  opacity: 0;
+	  transition: opacity 0.3s ease;
 	}
 	
-	box.middle-bottom:hover .hover-icons {
-	  display: flex;
+	.box-middle-bottom:hover .hover-icons {
+	  opacity: 1;
 	}
 	
-	/* Center hover icon (static) */
-	.svg-hover {
-	  width: 40px
+	.hover-icons img {
+	  position: relative;
+	  transition: opacity 0.3s ease, transform 0.3s ease;
+	  pointer-events: none;
 	}
 	
-	/* Side icons with slide animation */
-	.hover-icons .slide-left {
-	  width: 30px;
-	  animation: slideLeft 0.3s ease forwards;
+	.slide-left, .slide-right {
+	  opacity: 0;
+	  transform: translateX(0);
 	}
 	
+	.hover-icons .slide-left,
 	.hover-icons .slide-right {
-	  width: 30px;
-	  animation: slideRight 0.3s ease forwards;
+	  transition: transform 0.3s ease, opacity 0.3s ease;
+	}
+
+	.box-middle-bottom:hover .hover-icons .slide-left {
+	  transform: translateX(-10px);
+	  opacity: 1;
+	}
+
+	.box-middle-bottom:hover .hover-icons .slide-right {
+	  transform: translateX(10px);
+	  opacity: 1;
+	}
+	
+	.svg-center-default {
+	  opacity: 1;
+	  transition: opacity 0.3s ease;
+	}
+	
+	.svg-center-hover {
+	  opacity: 0;
+	  transition: opacity 0.3s ease;
+	}
+
+	.box-middle-bottom:hover .svg-center-hover {
+	  opacity: 1;
+	}
+
+	.box-middle-bottom:hover .svg-center-default {
+	  opacity: 0;
 	}
 	
     body {
@@ -112,7 +139,21 @@
       z-index: 10;
 	  pointer-events: none; /* prevents cursor conflict */
     }
-
+	
+	.svg-center-default,
+	.svg-center-hover {
+	  position: absolute;
+	  left: 50%;
+	  bottom: -20px;
+	  transform: translateX(-50%);
+	  width: 40px;
+	}
+	
+	.box-middle:hover .svg-center-hover {
+	  opacity: 1;
+	}
+	
+	
     .box-left .svg-slot {
       top: -20px;
       left: -20px;
@@ -171,13 +212,13 @@
 
   <div class="fancy-box box-middle-bottom">
 	<div class="svg-slot triple-icon-container">
-		<!-- Default static icon -->
-		<img src="github.com/Zandooy/vorunda-assets/blob/main/assets/SVGs/horse-grazing-black-silhouette-svgrepo-com.svg" class="svg-default">
-
+		<!-- Center icon (hidden on hover) -->
+	  	<img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-grazing-black-silhouette-svgrepo-com.svg" class="svg-center-default">
 		<!-- Hover group -->
 		<div class="hover-icons">
 		  <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-walking-black-silhouette-facing-to-left-svgrepo-com.svg" class="slide-left">
-		  <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-black-silhouette-svgrepo-com.svg" class="svg-hover">
+		  <!-- Center icon (shown on hover) -->
+		  <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-black-silhouette-svgrepo-com.svg" class="svg-center-hover">
 		  <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-in-running-motion-silhouette-svgrepo-com.svg" class="slide-right">
 		</div>
 	</div>
@@ -186,7 +227,7 @@
 	Start playing with a free, randomly rolled starter stallion of the standard princeps variety. Build your herd through random event encounters, breeding, buying & trading with other players, raffles, custom imports and more.</p>
   </div>
 
-  <div class="fancy-box box-bottom">
+  <div class="fancy-box box-right-bottom">
     <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/deer-svgrepo-com.svg" alt="" class="svg-slot">
     <p><strong>Collect Pets</strong><br/>Companion animals to aid you on your journey, pets are a great way to add passive boons to your activity rolls- some even add benefits to breeding.</p>
   </div>
