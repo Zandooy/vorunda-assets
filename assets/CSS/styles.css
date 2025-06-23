@@ -1,4 +1,3 @@
-<style>
     @keyframes wiggle {
       0%   { transform: translateX(-50%) rotate(0deg); }
       25%  { transform: translateX(-50%) rotate(-5deg); }
@@ -93,7 +92,11 @@
 	.box-middle:hover .svg-wiggle {
 	  animation: wiggle 0.4s ease-in-out infinite;
 	}
-	
+
+	.svg-wiggle {
+	  display block;
+	}
+
     body {
       margin: 0;
       padding: 0;
@@ -146,7 +149,6 @@
 	  width: 40px;
 	}
 	
-
     .box-left .svg-slot {
       top: -20px;
       left: -20px;
@@ -172,4 +174,3 @@
       bottom: -20px;
       right: -20px;
     }
-</style>
