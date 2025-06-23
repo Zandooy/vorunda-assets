@@ -19,6 +19,18 @@
 	  
     }
 	
+	.box-middle-bottom .svg-hover {
+		display: none;
+	}
+	
+	.box-middle-bottom:hover .svg-default {
+		display: none;
+	}
+	
+	.box-middle-bottom:hover .svg-hover {
+		display: block;
+	}
+	
     body {
       margin: 0;
       padding: 0;
@@ -58,6 +70,7 @@
       width: 40px;
       height: 40px;
       z-index: 10;
+	  pointer-events: none; /* prevents cursor conflict */
     }
 
     .box-left .svg-slot {
@@ -106,7 +119,7 @@
   </div>
 
   <div class="fancy-box box-middle">
-    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-running-silhouette-svgrepo-com.svg" alt="" class="svg-wiggle">
+    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-running-silhouette-svgrepo-com.svg" alt="" class="svg-slot svg-wiggle">
     <p><strong>Fun Activities</strong><br/>Interactive activities along the lines of Hunting, Herbalism/Gathering, Exploration and more.</p>
   </div>
 
@@ -125,7 +138,8 @@
   </div>
 
   <div class="fancy-box box-middle-bottom">
-    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-standing-black-shape-svgrepo-com.svg" alt="" class="svg-slot">
+    <img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-standing-black-shape-svgrepo-com.svg" alt="" class="svg-slot svg-default">
+	<img src="https://raw.githubusercontent.com/Zandooy/vorunda-assets/refs/heads/main/assets/SVGs/horse-standing-black-shape-svgrepo-com.svg" alt="" class="svg-slot svg-hover">
     <p><strong>Build Your Own Herds</strong><br/>Start playing with a free, randomly rolled starter stallion of the standard princeps variety. Build your herd through random event encounters, breeding, buying & trading with other players, raffles, custom imports and more.</p>
   </div>
 
