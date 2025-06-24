@@ -1,0 +1,34 @@
+<style>
+.filigree-box {
+  width: 1000px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #96ACB6; /* dusty blue */
+  color: #252527; /* deep black */
+  border: 5px solid #BFA781; /* gold border */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(191, 167, 129, 0.5); /* soft gold glow */
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+
+/* Corner flourishes using pseudo-elements */
+.filigree-box::before,
+.filigree-box::after {
+  content: "❧";
+  color: #BFA781;
+  font-size: 30px;
+  position: absolute;
+}
+
+.filigree-box::before {
+  top: -15px;
+  left: -15px;
+  transform: rotate(-45deg);
+}
+
+.filigree-box::after {
+  bottom: -15px;
+  right: -15px;
+  transform: rotate(135deg);
+}
