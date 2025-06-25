@@ -11,36 +11,31 @@
   position: relative;
 }
 
-/* Corner flourishes using pseudo-elements */
-.filigree-box::TL,
-.filigree-box::TR,
-.filigree-box::BL,
-.filigree-box::BR, {
-  content: "❧";
+.corner {
   color: #BFA781;
   font-size: 30px;
   position: absolute;
 }
 
-.filigree-box::TL {
+.TL {
   top: -15px;
   left: -15px;
   transform: rotate(-45deg);
 }
 
-.filigree-box::TR {
+.TR {
   top: 15px;
   right: 15px;
   transform: rotate(45deg);
 }
 
-.filigree-box::BL {
+.BL {
   bottom: -15px;
   left: -15px;
   transform: rotate(-135deg);
 }
 
-.filigree-box::BR {
+.BR {
   bottom: -15px;
   right: -15px;
   transform: rotate(135deg);
