@@ -2,31 +2,45 @@
   width: 1000px;
   margin: 20px auto;
   padding: 30px;
-  background-color: #96ACB6; /* dusty blue */
-  color: #252527; /* deep black */
-  border: 5px solid #BFA781; /* gold border */
+  background-color: #96ACB6;
+  color: #252527;
+  border: 5px solid #BFA781;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(191, 167, 129, 0.5); /* soft gold glow */
+  box-shadow: 0 0 20px rgba(191, 167, 129, 0.5);
   font-family: 'Georgia', serif;
   position: relative;
 }
 
 /* Corner flourishes using pseudo-elements */
-.filigree-box::before,
-.filigree-box::after {
+.filigree-box::TL,
+.filigree-box::TR,
+.filigree-box::BL,
+.filigree-box::BR, {
   content: "❧";
   color: #BFA781;
   font-size: 30px;
   position: absolute;
 }
 
-.filigree-box::before {
+.filigree-box::TL {
   top: -15px;
   left: -15px;
   transform: rotate(-45deg);
 }
 
-.filigree-box::after {
+.filigree-box::TR {
+  top: 15px;
+  right: 15px;
+  transform: rotate(45deg);
+}
+
+.filigree-box::BL {
+  bottom: -15px;
+  left: -15px;
+  transform: rotate(-135deg);
+}
+
+.filigree-box::BR {
   bottom: -15px;
   right: -15px;
   transform: rotate(135deg);
