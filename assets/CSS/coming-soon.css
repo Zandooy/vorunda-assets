@@ -24,19 +24,19 @@
 }
 
 .TR {
-  top: -15px;
-  right: -15px;
+  top: -18px;
+  right: -18px;
   transform: rotate(45deg);
 }
 
 .BL {
-  bottom: -15px;
-  left: -15px;
+  bottom: -18px;
+  left: -18px;
   transform: rotate(-135deg);
 }
 
 .BR {
   bottom: -18px;
-  right: -14px;
+  right: -18px;
   transform: rotate(135deg);
 }
