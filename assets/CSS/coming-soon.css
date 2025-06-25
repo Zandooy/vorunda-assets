@@ -18,14 +18,14 @@
 }
 
 .TL {
-  top: -15px;
-  left: -15px;
+  top: -18px;
+  left: -18px;
   transform: rotate(-45deg);
 }
 
 .TR {
-  top: 15px;
-  right: 15px;
+  top: -15px;
+  right: -15px;
   transform: rotate(45deg);
 }
 
@@ -36,7 +36,7 @@
 }
 
 .BR {
-  bottom: -15px;
-  right: -15px;
+  bottom: -18px;
+  right: -14px;
   transform: rotate(135deg);
 }
