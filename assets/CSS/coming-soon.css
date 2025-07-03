@@ -34,25 +34,6 @@
   left: -18px;
   transform: rotate(-135deg);
 }
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="assets/CSS/coming-soon.css">
-</head>
-<body>
-
-<div class="filigree-box">
-	<span class ="corner TL">❧</span>
-	<span class ="corner TR">❧</span>
-	<span class ="corner BL">❧</span>
-	<span class ="corner BR">❧</span>
-  <h3 style="margin-top:0;">COMING SOON.</h3>
-This ARPG is currently under development and is being produced, designed and maintained entirely by a single person.
-If you would be interested in assisting with the development, please reach out to Zandooy on DeviantArt or Discord.
-Your input, advice and ideas could help shape the future of the game!</div>
-
-</body>
-</html>
 
 .BR {
   bottom: -18px;
